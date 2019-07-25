@@ -9,7 +9,7 @@ import { pokemonReducer } from './store/reducers/index.js'
 import './index.scss';
 import App from './App';
 
-const store = createStore(pokemonReducer)
+const store = createStore(pokemonReducer, applyMiddleware(thunk))
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
